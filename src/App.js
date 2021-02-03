@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import {
+  AppBar,
+  Header,
+  Portfolio,
+  About,
+  NewsLetter,
+  GetInTouch,
+} from "./Components";
+import "antd/dist/antd.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "rsuite/dist/styles/rsuite-default.css";
+import { BackTop } from "antd";
+import FlightIcon from "@material-ui/icons/Flight";
 
 function App() {
+  const style = {
+    height: 60,
+    width: 60,
+    lineHeight: "40px",
+    borderRadius: 4,
+    backgroundColor: "transparent",
+    color: "#fff",
+    textAlign: "center",
+    fontSize: 24,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppBar />
+      <Header />
+      <Portfolio />
+      <About />
+      <NewsLetter />
+      <GetInTouch />
+      {/*  <BackTop>
+      <div style={style}>
+        <FlightIcon style={{ fontSize: 62 }} />
+      </div>
+    </BackTop> */}
+    </>
   );
 }
 
